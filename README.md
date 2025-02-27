@@ -34,11 +34,8 @@ npm run dev
 
 The portfolio will be available at `http://localhost:3000/`.
 
-//## 📷 Screenshots
-//![Portfolio Screenshot](https://your-image-link.com)
-
 ## 🌍 Live Demo
-Check out the live version: [Your Portfolio Live Link](https://yourportfolio.com)
+Check out the live version: [Link](https://yourportfolio.com)
 
 ## 🏗️ Future Improvements
 - Adding a **blog** section
