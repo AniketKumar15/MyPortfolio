@@ -1,0 +1,31 @@
+Vite installition
+
+npm create vite@latest  
+npm install
+npm run dev
+
+Tailwind css installition
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+],
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+react router:
+npm i react-router-dom
+
+
+FontAwsome
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+Here's a possible description:
+"For the purpose of practicing and improving my skills, I am using publicly available images from Google and blogs from other websites. The images and content are used solely for educational purposes and do not intend to infringe on any copyright or intellectual property rights. All credits and acknowledgments are given to the original creators and owners of the content."
+
+rafce

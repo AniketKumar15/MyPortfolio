@@ -1,0 +1,37 @@
+import { FaHtml5, FaCss3, FaJs, FaReact, FaUnity, FaJava, FaBootstrap, FaDatabase } from "react-icons/fa";
+import { SiC, SiCplusplus, SiTailwindcss, SiMysql, SiPhp } from "react-icons/si";
+import Badge from './Badge'
+
+const Skills = () => {
+  // const skills = [
+  //   { name: "C", icon: <SiC className="text-blue-400" />, link: "https://www.geeksforgeeks.org/c-programming-language/" },
+  //   { name: "C++", icon: <SiCplusplus className="text-blue-500" />, link: "https://cplusplus.com/doc/tutorial/" },
+  //   { name: "C#", icon: <span className="text-purple-400 text-6xl font-bold">C#</span>, link: "https://learn.microsoft.com/en-us/dotnet/csharp/" },
+  //   { name: "HTML5", icon: <FaHtml5 className="text-orange-500" />, link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+  //   { name: "CSS3", icon: <FaCss3 className="text-blue-500" />, link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+  //   { name: "JavaScript", icon: <FaJs className="text-yellow-400" />, link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+  //   { name: "MySQL", icon: <SiMysql className="text-blue-600" />, link: "https://www.w3schools.com/MySQL/default.asp" },
+  //   { name: "React.js", icon: <FaReact className="text-blue-400" />, link: "https://react.dev/learn" },
+  //   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" />, link: "https://tailwindcss.com/" },
+  //   { name: "Bootstrap", icon: <FaBootstrap className="text-purple-500" />, link: "https://getbootstrap.com/" },
+  //   { name: "Unity", icon: <FaUnity className="text-gray-400" />, link: "https://docs.unity.com/" },
+  //   { name: "Java", icon: <FaJava className="text-red-500" />, link: "https://docs.oracle.com/en/java/" },
+  //   { name: "PHP", icon: <SiPhp className="text-indigo-400" />, link: "https://www.php.net/manual/en/index.php" },
+  // ];
+
+  // return (
+  //   <section id="skills" className="min-h-screen flex flex-col items-center justify-center text-white px-6 pb-10">
+  //     <h2 className="text-4xl font-bold text-blue-500 mb-10">My Skills</h2>
+
+  //     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 text-center">
+  //       {skills.map((skill, index) => (
+  //         <a href={skill.link} target="blank" key={index} className="flex flex-col items-center bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition-transform">
+  //           <div className="text-6xl mb-3">{skill.icon}</div>
+  //           <h3 className="text-lg font-medium">{skill.name}</h3>
+  //         </a>
+  //       ))}
+  //     </div>
+  //   </section>
+  // );
+}
+export default Skills;

@@ -1,0 +1,36 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+/* body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    -45deg,
+    rgb(2, 0, 36),
+    rgb(9, 17, 121),
+    rgb(0, 212, 255)
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 17, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+/* background: oklch(0.21 0.034 264.665); */
