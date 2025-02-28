@@ -35,7 +35,7 @@ npm run dev
 The portfolio will be available at `http://localhost:3000/`.
 
 ## 🌍 Live Demo
-Check out the live version: [Link](https://yourportfolio.com)
+Check out the live version: [Link](https://aniket-kumar.vercel.app/)
 
 ## 🏗️ Future Improvements
 - Adding a **blog** section
