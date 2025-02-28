@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import myPic from '../assets/myPic.png'
 import './component.css'
+import resume from '../assets/ResumeOfAniket.pdf'
 
 const Hero = () => {
   const [rotateX, setRotateX] = useState(0);
@@ -33,9 +34,9 @@ const Hero = () => {
           Game Developer(Unity) | Front-End Developer
         </p>
         <div className="space-x-3">
-          <button className="mt-4 px-6 py-3 bg-white hover:text-blue-400 rounded-lg text-black font-medium boxShadow89 hoverShadow">
+          <a href={resume} download className="mt-4 px-6 py-3 bg-white hover:text-blue-400 rounded-lg text-black font-medium boxShadow89 hoverShadow">
             Download Resume
-          </button>
+          </a>
           <a href="https://github.com/AniketKumar15" target="blank" className="mt-4 px-6 py-3 bg-white hover:text-blue-400 rounded-lg text-black font-medium boxShadow89 hoverShadow cursor-pointer">
             Github
           </a>
