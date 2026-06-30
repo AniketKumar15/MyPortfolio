@@ -4,7 +4,11 @@ import cors from 'cors';
 import morgan from 'morgan';
 import connectDB from './config/db.js';
 
-dotenv.config();
+// Configuring dotenv to load environment variables
+dotenv.config({
+  path: "./env"
+});
+
 
 const app = express();
 
