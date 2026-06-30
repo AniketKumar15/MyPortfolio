@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-bg-primary: #0A0A0A;
+  --color-bg-secondary: #111111;
+  --color-bg-card: #151515;
+
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #A1A1AA;
+
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-accent: #FFFFFF;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-primary text-text-primary font-sans antialiased;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight text-text-primary;
+    line-height: 1.2;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #EAEAEA;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CCCCCC;
+}
+
+/* Utility for grid layouts */
+@layer utilities {
+  .container-max {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+
+  .container-content {
+    @apply max-w-3xl mx-auto px-6 sm:px-8;
+  }
+
+  .prose {
+    --tw-prose-body: var(--color-text-secondary);
+    --tw-prose-headings: var(--color-text-primary);
+    --tw-prose-links: var(--color-accent);
+    --tw-prose-bold: var(--color-text-primary);
+    --tw-prose-counters: var(--color-text-secondary);
+    --tw-prose-bullets: var(--color-text-secondary);
+    --tw-prose-hr: var(--color-border-subtle);
+    --tw-prose-quotes: var(--color-text-primary);
+    --tw-prose-quote-borders: var(--color-border-subtle);
+    --tw-prose-captions: var(--color-text-secondary);
+    --tw-prose-code: var(--color-text-primary);
+    --tw-prose-pre-code: var(--color-text-secondary);
+    --tw-prose-pre-bg: var(--color-bg-secondary);
+    --tw-prose-th-borders: var(--color-border-subtle);
+    --tw-prose-td-borders: var(--color-border-subtle);
+  }
+
+  .prose blockquote {
+    @apply font-normal italic border-l-4 border-border-subtle pl-6 text-text-secondary;
+  }
+
+  .prose pre {
+    @apply bg-bg-secondary border border-border-subtle rounded-xl p-6 text-sm overflow-x-auto;
+  }
+
+  .prose code {
+    @apply font-mono text-sm bg-bg-secondary px-1.5 py-0.5 rounded border border-border-subtle text-text-primary;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0 border-none text-text-secondary;
+  }
+
+  .prose img {
+    @apply rounded-xl border border-border-subtle shadow-sm my-10;
+  }
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4 {
+    @apply font-bold tracking-tight text-text-primary mt-12 mb-6;
+  }
+
+  .prose h2 {
+    @apply text-2xl;
+  }
+
+  .prose h3 {
+    @apply text-xl;
+  }
+
+  .prose p {
+    @apply leading-relaxed mb-6;
+  }
+
+  .prose ul,
+  .prose ol {
+    @apply mb-6;
+  }
+
+  .prose li {
+    @apply mb-2;
+  }
+}
+
+/* Editorial Button Styles */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-white text-black font-bold rounded-full transition-all hover:bg-[#a1a1aa] shadow-[0_0_20px_rgba(255,255,255,0.1)];
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-transparent text-white border border-border-subtle font-bold rounded-full transition-colors hover:bg-white/10;
+}
