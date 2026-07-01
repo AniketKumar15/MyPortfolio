@@ -36,7 +36,7 @@ const createCRUDEndpoints = (builder, path, tag) => ({
 });
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: 'http://localhost:5000/api', // Update if production
+  baseUrl: import.meta.env.VITE_URL + '/api', // Update if production
   prepareHeaders: (headers, { getState }) => {
     const token = localStorage.getItem('token');
     if (token) {
@@ -48,7 +48,7 @@ const baseQuery = fetchBaseQuery({
 
 const baseQueryWithReauth = async (args, api, extraOptions) => {
   let result = await baseQuery(args, api, extraOptions);
-  
+
   if (result.error && result.error.status === 401) {
     // Unauthorized - token is expired or invalid from another localhost app
     localStorage.removeItem('token');
@@ -71,12 +71,12 @@ export const apiSlice = createApi({
     createBlog: builder.mutation({ query: (data) => ({ url: '/blogs', method: 'POST', body: data }), invalidatesTags: ['Blog'] }),
     updateBlog: builder.mutation({ query: ({ id, ...patch }) => ({ url: `/blogs/${id}`, method: 'PUT', body: patch }), invalidatesTags: (result, error, { id }) => [{ type: 'Blog', id }, 'Blog'] }),
     deleteBlog: builder.mutation({ query: (id) => ({ url: `/blogs/${id}`, method: 'DELETE' }), invalidatesTags: ['Blog'] }),
-    
+
     // Categories
     getCategories: builder.query({ query: () => '/categories', providesTags: ['Category'] }),
     createCategory: builder.mutation({ query: (data) => ({ url: '/categories', method: 'POST', body: data }), invalidatesTags: ['Category'] }),
     deleteCategory: builder.mutation({ query: (id) => ({ url: `/categories/${id}`, method: 'DELETE' }), invalidatesTags: ['Category'] }),
-    
+
     // Auth
     login: builder.mutation({ query: (credentials) => ({ url: '/auth/login', method: 'POST', body: credentials }) }),
     updateCredentials: builder.mutation({ query: (data) => ({ url: '/auth/credentials', method: 'PUT', body: data }) }),
@@ -101,8 +101,8 @@ export const apiSlice = createApi({
   }),
 });
 
-export const { 
-  useGetBlogsQuery, 
+export const {
+  useGetBlogsQuery,
   useGetAdminBlogsQuery,
   useGetBlogBySlugQuery,
   useCreateBlogMutation,
@@ -113,7 +113,7 @@ export const {
   useDeleteCategoryMutation,
   useLoginMutation,
   useUpdateCredentialsMutation,
-  
+
   useGetSettingsQuery,
   useUpdateSettingsMutation,
 
