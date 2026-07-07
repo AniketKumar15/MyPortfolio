@@ -62,9 +62,9 @@ const Navbar = () => {
                 <kbd className="hidden sm:inline-block ml-2 px-1.5 py-0.5 text-xs font-sans bg-bg-primary border border-border-subtle rounded text-text-secondary">⌘K</kbd>
               </button>
 
-              <Link to="/admin" className="p-2 text-text-secondary hover:text-accent transition-colors" title="Admin Portal">
+              {/* <Link to="/admin" className="p-2 text-text-secondary hover:text-accent transition-colors" title="Admin Portal">
                 <User className="w-5 h-5" />
-              </Link>
+              </Link> */}
             </div>
 
             {/* Mobile Menu Button */}
@@ -99,11 +99,11 @@ const Navbar = () => {
                     {link.name}
                   </Link>
                 ))}
-                <div className="pt-4 mt-4 border-t border-border-subtle flex gap-4 px-3">
+                {/* <div className="pt-4 mt-4 border-t border-border-subtle flex gap-4 px-3">
                   <Link to="/admin" className="flex items-center gap-2 text-sm font-medium text-text-secondary hover:text-accent transition-colors">
                     <User className="w-4 h-4" /> Admin Login
                   </Link>
-                </div>
+                </div> */}
               </div>
             </motion.div>
           )}
