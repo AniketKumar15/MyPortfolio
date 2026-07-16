@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -41,8 +42,9 @@ const PrivateRoute = ({ children }) => {
 
 function App() {
   return (
-    <Router>
-      <Toaster position="top-right" />
+    <HelmetProvider>
+      <Router>
+        <Toaster position="top-right" />
       <ReactLenis root options={{ lerp: 0.05, duration: 1.5, smoothWheel: true }}>
         <ScrollToTop />
         <TargetCursor 
@@ -93,7 +95,8 @@ function App() {
           </Routes>
         </div>
       </ReactLenis>
-    </Router>
+      </Router>
+    </HelmetProvider>
   );
 }
 

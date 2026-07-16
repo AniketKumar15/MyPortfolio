@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { useGetBlogsQuery, useGetSettingsQuery } from '../../store/apiSlice';
 import { ArrowLeft, LinkIcon, Share } from 'lucide-react';
+import SEO from '../../components/SEO';
 import { useEffect, useState, useRef } from 'react';
 import toast from 'react-hot-toast';
 import gsap from 'gsap';
@@ -104,6 +105,30 @@ const SingleBlog = () => {
 
   return (
     <div className="bg-[#000000] min-h-screen text-white selection:bg-accent selection:text-black pb-24">
+      <SEO 
+        title={`${blog.title} | Aniket Kumar`}
+        description={blog.excerpt || `Read ${blog.title} by Aniket Kumar.`}
+        image={blog.featuredImage || settings?.profileImage}
+        type="article"
+        publishedTime={blog.createdAt}
+        modifiedTime={blog.updatedAt || blog.createdAt}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": blog.title,
+          "image": [
+            blog.featuredImage || settings?.profileImage || "https://aniket-kumar.vercel.app/ProfileNoBG.png"
+          ],
+          "datePublished": blog.createdAt,
+          "dateModified": blog.updatedAt || blog.createdAt,
+          "author": [{
+            "@type": "Person",
+            "name": "Aniket Kumar",
+            "url": "https://aniket-kumar.vercel.app"
+          }]
+        }}
+      />
+
       {/* Progress Bar */}
       <div
         className="fixed top-0 left-0 h-1 bg-accent z-50 transition-all duration-150"
@@ -116,14 +141,14 @@ const SingleBlog = () => {
 
           {/* Massive Background Text */}
           <div className="absolute top-1/2 left-0 w-full overflow-hidden pointer-events-none select-none flex justify-center -translate-y-1/2 z-0">
-            <h1 className="text-[20vw] font-black leading-none tracking-tighter bg-gradient-to-b from-white/10 to-transparent bg-clip-text text-transparent uppercase text-center w-full whitespace-nowrap opacity-40">
+            <div className="text-[20vw] font-black leading-none tracking-tighter bg-gradient-to-b from-white/10 to-transparent bg-clip-text text-transparent uppercase text-center w-full whitespace-nowrap opacity-40">
               {blog.category?.name || 'ARTICLE'}
-            </h1>
+            </div>
           </div>
 
           <div className="absolute inset-0 z-10">
             {blog.featuredImage ? (
-              <img src={blog.featuredImage} alt={blog.title} className="w-full h-full object-cover opacity-40 mix-blend-luminosity" />
+              <img src={blog.featuredImage} alt={blog.title} loading="eager" fetchPriority="high" className="w-full h-full object-cover opacity-40 mix-blend-luminosity" />
             ) : (
               <div className="w-full h-full bg-[#0A0A0A] flex items-center justify-center opacity-40" />
             )}

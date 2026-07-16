@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Terminal, Code2, Cpu, Gamepad2, ArrowUpRight, ChevronRight, GraduationCap, Briefcase } from 'lucide-react';
+import SEO from '../../components/SEO';
 import {
   useGetBlogsQuery,
   useGetSettingsQuery,
@@ -90,6 +91,21 @@ const Home = () => {
 
   return (
     <div className="">
+      <SEO 
+        title={`${settings?.heroContent?.split(',')[0] || 'Aniket Kumar'} | Game Developer Portfolio`}
+        description={settings?.shortBio || 'Portfolio of Aniket Kumar, Game Developer & Gameplay Programmer.'}
+        image={settings?.profileImage || '/ProfileNoBG.png'}
+        type="website"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Aniket Kumar",
+          "url": "https://aniket-kumar.vercel.app",
+          "image": settings?.profileImage || "https://aniket-kumar.vercel.app/ProfileNoBG.png",
+          "jobTitle": "Game Developer",
+          "sameAs": Object.values(settings?.socialLinks || {}).filter(Boolean)
+        }}
+      />
 
       {/* 1. LAYERED CINEMATIC HERO */}
       <section className="relative min-h-[90vh] md:min-h-screen flex flex-col justify-end pt-24 md:pt-32 pb-6 md:pb-16 overflow-hidden border-b border-[#27272a]">
@@ -120,8 +136,10 @@ const Home = () => {
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            src="/ProfileNoBG.png"
-            alt="Aniket Kumar"
+            src={settings?.profileImage || "/ProfileNoBG.png"}
+            alt="Aniket Kumar - Game Developer"
+            loading="eager"
+            fetchPriority="high"
             className="w-[115vw] sm:w-[90vw] max-w-[600px] h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
           />
           {/* Gradient fade to blend the bottom of the image smoothly */}

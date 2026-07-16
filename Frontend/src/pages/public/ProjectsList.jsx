@@ -2,6 +2,7 @@ import { useGetProjectsQuery } from '../../store/apiSlice';
 import { ArrowRight, Gamepad2, ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { FaGithub, FaGamepad } from 'react-icons/fa';
+import SEO from '../../components/SEO';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -49,6 +50,10 @@ const ProjectsList = () => {
 
   return (
     <div className="min-h-screen bg-[#000000] text-white selection:bg-accent selection:text-black pb-32">
+      <SEO 
+        title="Projects & Games | Aniket Kumar"
+        description="Explore my portfolio of games, tools, and interactive experiences."
+      />
 
       {/* ========================================================= */}
       {/* 1. MASSIVE HERO FEATURE */}

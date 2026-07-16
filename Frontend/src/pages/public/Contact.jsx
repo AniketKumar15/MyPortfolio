@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { useCreateMessageMutation } from '../../store/apiSlice';
 import toast from 'react-hot-toast';
+import SEO from '../../components/SEO';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,6 +59,10 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-[#000000] text-white selection:bg-accent selection:text-black pb-32">
+      <SEO 
+        title="Contact | Aniket Kumar"
+        description="Get in touch with Aniket Kumar for game development roles, freelance work, or collaborations."
+      />
       
       {/* 1. Cinematic Hero Header */}
       <section className="relative w-full pt-32 pb-16 md:pt-48 md:pb-24 overflow-hidden border-b border-[#27272a]">

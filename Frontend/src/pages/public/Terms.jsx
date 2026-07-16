@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import SEO from '../../components/SEO';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,6 +18,10 @@ const Terms = () => {
 
   return (
     <div className="bg-[#000000] min-h-screen text-white selection:bg-accent selection:text-black pb-32">
+      <SEO 
+        title="Terms & Conditions | Aniket Kumar"
+        description="Terms and conditions for using Aniket Kumar's portfolio and associated services."
+      />
       
       {/* 1. Cinematic Hero Header */}
       <section className="relative w-full pt-32 pb-16 md:pt-48 md:pb-24 overflow-hidden border-b border-[#27272a]">

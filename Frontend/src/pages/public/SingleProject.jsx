@@ -3,6 +3,7 @@ import { useGetProjectsQuery } from '../../store/apiSlice';
 import { ArrowLeft, ExternalLink, Gamepad2, ChevronRight, TerminalSquare } from 'lucide-react';
 import { FaGithub, FaGamepad } from 'react-icons/fa';
 import NotFound from './NotFound';
+import SEO from '../../components/SEO';
 
 const SingleProject = () => {
   const { slug } = useParams();
@@ -15,12 +16,30 @@ const SingleProject = () => {
 
   return (
     <div className="min-h-screen bg-[#09090b] text-white selection:bg-accent selection:text-black pb-32">
+      <SEO 
+        title={`${project.title} | Aniket Kumar`}
+        description={project.shortDescription || `View details about ${project.title} by Aniket Kumar.`}
+        image={project.thumbnail}
+        type="article"
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          "name": project.title,
+          "description": project.shortDescription,
+          "image": project.thumbnail ? [project.thumbnail] : [],
+          "author": {
+            "@type": "Person",
+            "name": "Aniket Kumar"
+          },
+          "url": window.location.href
+        }}
+      />
 
       {/* 1. Cinematic Hero */}
       <section className="relative w-full h-[60vh] md:h-[70vh] flex items-end pt-20 border-b border-[#27272a]">
         <div className="absolute inset-0 z-0">
           {project.thumbnail ? (
-            <img src={project.thumbnail} alt={project.title} className="w-full h-full object-cover opacity-50" />
+            <img src={project.thumbnail} alt={project.title} loading="eager" fetchPriority="high" className="w-full h-full object-cover opacity-50" />
           ) : (
             <div className="w-full h-full bg-[#18181b] flex items-center justify-center opacity-40">
               <Gamepad2 className="w-32 h-32 text-[#27272a]" />

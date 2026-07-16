@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useGetSettingsQuery } from '../../store/apiSlice';
+import SEO from '../../components/SEO';
 import { Trophy, Code2, Monitor } from 'lucide-react';
 
 const About = () => {
@@ -26,6 +27,10 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-[#09090b] text-white selection:bg-accent selection:text-black pb-32">
+      <SEO 
+        title="About Me | Aniket Kumar"
+        description="Learn more about Aniket Kumar, my skills, experience, and education in game development."
+      />
 
       {/* 1. LAYERED CINEMATIC HEADER */}
       <section className="relative min-h-[60vh] flex flex-col justify-end pt-32 pb-16 overflow-hidden border-b border-[#27272a]">

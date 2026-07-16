@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { ArrowRight, BookOpen } from 'lucide-react';
+import SEO from '../../components/SEO';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,6 +54,10 @@ const BlogList = () => {
 
   return (
     <div className="min-h-screen bg-[#000000] text-white selection:bg-accent selection:text-black pb-32">
+      <SEO 
+        title="Devlogs & Articles | Aniket Kumar"
+        description="Read my latest devlogs, technical articles, and updates on game development."
+      />
       
       {/* 1. MASSIVE HERO HEADER */}
       <section className="relative w-full pt-32 pb-16 md:pt-48 md:pb-24 overflow-hidden border-b border-[#27272a]">
