@@ -8,11 +8,14 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          animation: ['framer-motion', 'gsap', '@gsap/react', 'lenis'],
-          editor: ['@tiptap/react', '@tiptap/starter-kit', '@tiptap/extension-image', '@tiptap/extension-link', '@tiptap/extension-code-block-lowlight', 'lowlight'],
-          ui: ['lucide-react', 'react-icons', 'react-hot-toast']
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) return 'vendor';
+            if (id.includes('framer-motion') || id.includes('gsap') || id.includes('lenis')) return 'animation';
+            if (id.includes('@tiptap') || id.includes('lowlight')) return 'editor';
+            if (id.includes('lucide-react') || id.includes('react-icons') || id.includes('react-hot-toast')) return 'ui';
+            return 'modules';
+          }
         }
       }
     }
