@@ -9,7 +9,7 @@ import {
   useGetEducationsQuery,
   useGetExperiencesQuery
 } from '../../store/apiSlice';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -41,44 +41,7 @@ const Home = () => {
     });
   }, []);
 
-  if (settingsLoading || projectsLoading || skillsLoading) {
-    return (
-      <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#000000] overflow-hidden">
-        {/* Massive Background Loading Text */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none opacity-40">
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: [0, 1, 0.5, 1], scale: 1 }}
-            transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
-            className="text-[30vw] md:text-[20vw] font-black leading-[0.8] tracking-tighter text-[#18181b] whitespace-nowrap"
-          >
-            LOADING
-          </motion.h1>
-          <motion.h1
-            initial={{ opacity: 0, scale: 1.1 }}
-            animate={{ opacity: [0, 1, 0.5, 1], scale: 1 }}
-            transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", ease: "easeInOut", delay: 0.2 }}
-            className="text-[30vw] md:text-[20vw] font-black leading-[0.8] tracking-tighter text-[#18181b] whitespace-nowrap"
-          >
-            SYSTEMS
-          </motion.h1>
-        </div>
 
-        {/* Foreground Progress Indicator */}
-        <div className="relative z-10 flex flex-col items-center mt-[20vh]">
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: 200 }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="h-1 bg-white mb-4 rounded-full"
-          />
-          <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#a1a1aa] animate-pulse">
-            Establishing Connection...
-          </p>
-        </div>
-      </div>
-    );
-  }
 
   // Combine and sort timeline data
   const timelineData = [
@@ -90,7 +53,52 @@ const Home = () => {
   const currentProject = projects?.find(p => p.status === 'In Development') || projects?.[0];
 
   return (
-    <div className="">
+    <>
+      <AnimatePresence>
+        {(settingsLoading || projectsLoading || skillsLoading) && (
+          <motion.div 
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#000000] overflow-hidden"
+          >
+            {/* Massive Background Loading Text */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none opacity-40">
+              <motion.h1
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: [0, 1, 0.5, 1], scale: 1 }}
+                transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+                className="text-[30vw] md:text-[20vw] font-black leading-[0.8] tracking-tighter text-[#18181b] whitespace-nowrap"
+              >
+                LOADING
+              </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: [0, 1, 0.5, 1], scale: 1 }}
+                transition={{ duration: 2, repeat: Infinity, repeatType: "reverse", ease: "easeInOut", delay: 0.2 }}
+                className="text-[30vw] md:text-[20vw] font-black leading-[0.8] tracking-tighter text-[#18181b] whitespace-nowrap"
+              >
+                SYSTEMS
+              </motion.h1>
+            </div>
+
+            {/* Foreground Progress Indicator */}
+            <div className="relative z-10 flex flex-col items-center mt-[20vh]">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: 200 }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+                className="h-1 bg-white mb-4 rounded-full"
+              />
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#a1a1aa] animate-pulse">
+                Establishing Connection...
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <div className="">
       <SEO 
         title={`${settings?.heroContent?.split(',')[0] || 'Aniket Kumar'} | Game Developer Portfolio`}
         description={settings?.shortBio || 'Portfolio of Aniket Kumar, Game Developer & Gameplay Programmer.'}
@@ -414,6 +422,7 @@ const Home = () => {
       </section>
 
     </div>
+    </>
   );
 };
 

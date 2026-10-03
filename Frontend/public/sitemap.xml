@@ -3,49 +3,103 @@
 
   <url>
     <loc>https://aniket-kumar.vercel.app/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://aniket-kumar.vercel.app/about</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aniket-kumar.vercel.app/projects</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aniket-kumar.vercel.app/blog</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aniket-kumar.vercel.app/contact</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aniket-kumar.vercel.app/privacy</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aniket-kumar.vercel.app/terms</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://aniket-kumar.vercel.app/disclaimer</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aniket-kumar.vercel.app/blog/unity-bootstrap-scene-production-mobile-game</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aniket-kumar.vercel.app/blog/when-a-plugin-wasnt-enough</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aniket-kumar.vercel.app/blog/what-raji-kaliyuga-s-gameplay-trailer-teaches-us-about-modern-game-development</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aniket-kumar.vercel.app/blog/what-makes-hyper-casual-games-addictive</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aniket-kumar.vercel.app/projects/deepurls-unity-sdk</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aniket-kumar.vercel.app/projects/dive-horizon</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aniket-kumar.vercel.app/projects/dodge</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aniket-kumar.vercel.app/projects/blox</loc>
+    <lastmod>2026-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://aniket-kumar.vercel.app/projects/cannon-master</loc>
+    <lastmod>2026-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

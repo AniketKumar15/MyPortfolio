@@ -106,7 +106,7 @@ const SingleBlog = () => {
 
   return (
     <div className="bg-[#000000] min-h-screen text-white selection:bg-accent selection:text-black pb-24">
-      <SEO 
+      <SEO
         title={`${blog.title} | Aniket Kumar`}
         description={blog.excerpt || `Read ${blog.title} by Aniket Kumar.`}
         image={blog.featuredImage || settings?.profileImage}
@@ -246,7 +246,7 @@ const SingleBlog = () => {
 
             {/* Sticky Sidebar */}
             <div className="hidden lg:block relative h-full">
-              <div className="sticky top-32 space-y-12 gsap-reveal">
+              <div className="sticky top-32 space-y-5 gsap-reveal">
 
                 {/* Share Section */}
                 <div className="bg-[#0A0A0A] border border-[#27272a] p-6 rounded-3xl">
@@ -265,7 +265,7 @@ const SingleBlog = () => {
                 {headings.length > 0 && (
                   <div className="bg-[#0A0A0A] border border-[#27272a] p-6 rounded-3xl">
                     <h4 className="text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest mb-4">Contents</h4>
-                    <nav className="space-y-4 max-h-[calc(100vh-400px)] min-h-[150px] overflow-y-auto pr-4 pb-4" style={{ scrollbarWidth: 'thin', scrollbarColor: '#3f3f46 transparent' }}>
+                    <nav className="space-y-4 max-h-[45vh] min-h-[150px] overflow-y-auto pr-4 pb-4" style={{ scrollbarWidth: 'thin', scrollbarColor: '#3f3f46 transparent' }}>
                       {headings.map((h) => (
                         <a
                           key={h.id}
