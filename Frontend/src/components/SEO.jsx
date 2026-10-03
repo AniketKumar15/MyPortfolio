@@ -16,7 +16,7 @@ const SEO = ({
   const url = `${baseUrl}${pathname}`;
 
   // Default image if none provided
-  const ogImage = image || `${baseUrl}/ProfileNoBG.png`;
+  const ogImage = image || `${baseUrl}/ProfileNoBG.webp`;
 
   return (
     <Helmet>

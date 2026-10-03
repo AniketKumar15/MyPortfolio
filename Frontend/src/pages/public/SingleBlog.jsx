@@ -118,7 +118,7 @@ const SingleBlog = () => {
           "@type": "Article",
           "headline": blog.title,
           "image": [
-            blog.featuredImage || settings?.profileImage || "https://aniket-kumar.vercel.app/ProfileNoBG.png"
+            blog.featuredImage || settings?.profileImage || "https://aniket-kumar.vercel.app/ProfileNoBG.webp"
           ],
           "datePublished": blog.createdAt,
           "dateModified": blog.updatedAt || blog.createdAt,
@@ -191,7 +191,7 @@ const SingleBlog = () => {
               {/* Author Bio Banner (Top) */}
               <div className="flex items-center gap-4 py-8 mb-12 border-b border-[#27272a] gsap-reveal">
                 <div className="w-14 h-14 rounded-full bg-[#111111] border border-[#27272a] flex items-center justify-center font-bold text-lg overflow-hidden">
-                  <img src="/Profile.png" alt="Aniket Kumar" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+                  <img src="/Profile.webp" alt="Aniket Kumar" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
                 </div>
                 <div>
                   <p className="font-bold text-white text-lg">Aniket Kumar</p>
@@ -209,7 +209,7 @@ const SingleBlog = () => {
               {/* Author Bio Footer */}
               <div className="bg-[#0A0A0A] border border-[#27272a] rounded-3xl p-8 mb-16 flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left gsap-reveal">
                 <div className="w-24 h-24 flex-shrink-0 rounded-full bg-[#111111] border border-[#27272a] overflow-hidden">
-                  <img src="/Profile.png" alt="Aniket Kumar" className="w-full h-full object-cover" />
+                  <img src="/Profile.webp" alt="Aniket Kumar" className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h3 className="font-black text-2xl mb-1 text-white">Aniket Kumar</h3>

@@ -94,14 +94,14 @@ const Home = () => {
       <SEO 
         title={`${settings?.heroContent?.split(',')[0] || 'Aniket Kumar'} | Game Developer Portfolio`}
         description={settings?.shortBio || 'Portfolio of Aniket Kumar, Game Developer & Gameplay Programmer.'}
-        image={settings?.profileImage || '/ProfileNoBG.png'}
+        image={settings?.profileImage || '/ProfileNoBG.webp'}
         type="website"
         schema={{
           "@context": "https://schema.org",
           "@type": "Person",
           "name": "Aniket Kumar",
           "url": "https://aniket-kumar.vercel.app",
-          "image": settings?.profileImage || "https://aniket-kumar.vercel.app/ProfileNoBG.png",
+          "image": settings?.profileImage || "https://aniket-kumar.vercel.app/ProfileNoBG.webp",
           "jobTitle": "Game Developer",
           "sameAs": Object.values(settings?.socialLinks || {}).filter(Boolean)
         }}
@@ -136,7 +136,7 @@ const Home = () => {
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            src={settings?.profileImage || "/ProfileNoBG.png"}
+            src={settings?.profileImage || "/ProfileNoBG.webp"}
             alt="Aniket Kumar - Game Developer"
             loading="eager"
             fetchPriority="high"

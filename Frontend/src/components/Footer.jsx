@@ -27,7 +27,7 @@ const Footer = () => {
           <div className="md:col-span-4 flex flex-col">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 rounded-full overflow-hidden bg-[#18181b]">
-                <img src={settings?.profileImage || "/Profile.png"} alt="Aniket Kumar" className="w-full h-full object-cover" />
+                <img src={settings?.profileImage || "/Profile.webp"} alt="Aniket Kumar" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h2 className="text-lg font-bold tracking-tight text-white">Aniket Kumar</h2>
