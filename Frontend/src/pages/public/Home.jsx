@@ -224,7 +224,7 @@ const Home = () => {
                 <Link to={`/projects/${proj.slug}`} key={proj._id} className="group bg-[#111111] border border-[#27272a] rounded-3xl overflow-hidden hover:border-[#3f3f46] transition-all duration-500 shadow-sm flex flex-col">
                   {proj.thumbnail ? (
                     <div className="w-full aspect-[16/9] bg-[#18181b] overflow-hidden border-b border-[#27272a]">
-                      <img src={proj.thumbnail} alt={proj.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" />
+                      <img src={proj.thumbnail} alt={proj.title} className="w-full h-full object-cover" />
                     </div>
                   ) : (
                     <div className="w-full aspect-[16/9] bg-[#18181b] flex items-center justify-center border-b border-[#27272a]">
@@ -382,7 +382,7 @@ const Home = () => {
               {blogs.slice(0, 3).map((post) => (
                 <Link to={`/blog/${post.slug}`} key={post._id} className="group bg-[#111111] border border-[#27272a] rounded-3xl overflow-hidden hover:border-[#3f3f46] transition-all duration-500 shadow-sm flex flex-col">
                   <div className="aspect-[16/9] w-full bg-[#18181b] overflow-hidden border-b border-[#27272a]">
-                    <img src={post.featuredImage || 'https://via.placeholder.com/800x450'} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80 group-hover:opacity-100" />
+                    <img src={post.featuredImage || 'https://via.placeholder.com/800x450'} alt={post.title} className="w-full h-full object-cover" />
                   </div>
                   <div className="p-8 flex-1 flex flex-col">
                     <p className="text-[10px] font-bold text-accent uppercase tracking-widest mb-3">{post.category?.name || 'Devlog'}</p>

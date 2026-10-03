@@ -146,7 +146,9 @@ const TiptapEditor = ({ content, onChange }) => {
   return (
     <div className="border border-border-subtle rounded-xl overflow-hidden bg-[#151515] shadow-sm focus-within:border-accent focus-within:ring-1 focus-within:ring-accent transition-all">
       <MenuBar editor={editor} />
-      <EditorContent editor={editor} />
+      <div className="max-h-[600px] overflow-y-auto">
+        <EditorContent editor={editor} />
+      </div>
     </div>
   );
 };

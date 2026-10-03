@@ -91,7 +91,7 @@ const BlogCreate = () => {
           <button 
             onClick={handlePublish}
             disabled={isLoading}
-            className="flex items-center gap-2 px-5 py-2.5 bg-accent text-white text-sm font-medium rounded-md hover:bg-black/80 transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 px-5 py-2.5 bg-accent text-black text-sm font-bold rounded-md hover:bg-[#1A1A1A] hover:text-white transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
           >
             <Save className="w-4 h-4" /> 
             {isLoading ? 'Saving...' : 'Save Post'}
@@ -126,7 +126,7 @@ const BlogCreate = () => {
                 <select 
                   value={status}
                   onChange={(e) => setStatus(e.target.value)}
-                  className="w-full px-3 py-2 border border-border-subtle rounded-md focus:outline-none focus:border-accent text-sm"
+                  className="w-full px-3 py-2 border border-border-subtle bg-[#151515] text-white rounded-md focus:outline-none focus:border-accent text-sm"
                 >
                   <option value="published">Published</option>
                   <option value="draft">Draft</option>
@@ -149,7 +149,7 @@ const BlogCreate = () => {
                 <select 
                   value={categoryId}
                   onChange={(e) => setCategoryId(e.target.value)}
-                  className="w-full px-3 py-2 border border-border-subtle rounded-md focus:outline-none focus:border-accent text-sm"
+                  className="w-full px-3 py-2 border border-border-subtle bg-[#151515] text-white rounded-md focus:outline-none focus:border-accent text-sm"
                 >
                   <option value="">Select Category</option>
                   {categories?.map(cat => (

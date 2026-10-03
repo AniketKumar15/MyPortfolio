@@ -128,7 +128,7 @@ const SingleProject = () => {
                       <img 
                         src={img} 
                         alt={`Gallery ${i + 1}`} 
-                        className="h-full w-auto max-w-none object-contain group-hover:scale-[1.02] transition-transform duration-500" 
+                        className="h-full w-auto max-w-none object-contain" 
                       />
                     </div>
                   ))}

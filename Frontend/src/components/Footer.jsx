@@ -124,10 +124,10 @@ const Footer = () => {
           <p className="text-[#52525b] text-[11px] font-bold tracking-wider">
             © {new Date().getFullYear()} Aniket Kumar. Engineered with precision.
           </p>
-          <div className="flex items-center gap-2 text-[#52525b] text-[11px] font-bold tracking-wider uppercase">
+          {/* <div className="flex items-center gap-2 text-[#52525b] text-[11px] font-bold tracking-wider uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
             SYSTEM: ALL SYSTEMS OPERATIONAL
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

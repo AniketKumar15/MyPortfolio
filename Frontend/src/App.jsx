@@ -29,7 +29,7 @@ import Disclaimer from './pages/public/Disclaimer';
 import NotFound from './pages/public/NotFound';
 
 import { Toaster } from 'react-hot-toast';
-import { ReactLenis } from 'lenis/react';
+
 
 // Simple PrivateRoute wrapper
 const PrivateRoute = ({ children }) => {
@@ -45,14 +45,14 @@ function App() {
     <HelmetProvider>
       <Router>
         <Toaster position="top-right" />
-      <ReactLenis root options={{ lerp: 0.05, duration: 1.5, smoothWheel: true }}>
+
         <ScrollToTop />
-        <TargetCursor 
+        {/* <TargetCursor 
           spinDuration={2}
           hideDefaultCursor={true}
           parallaxOn={true}
           targetSelector="a, button, .cursor-target"
-        />
+        /> */}
         <div className="min-h-screen flex flex-col bg-bg-primary text-text-primary transition-colors duration-300">
           {/* Public Routes with Navbar and Footer */}
           <Routes>
@@ -94,7 +94,7 @@ function App() {
             </Route>
           </Routes>
         </div>
-      </ReactLenis>
+
       </Router>
     </HelmetProvider>
   );

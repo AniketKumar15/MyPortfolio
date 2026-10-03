@@ -102,7 +102,7 @@ const BlogList = () => {
                     <img 
                       src={blog.featuredImage || 'https://via.placeholder.com/800x600/0A0A0A/3f3f46?text=No+Image'} 
                       alt={blog.title} 
-                      className="w-full h-full object-cover mix-blend-luminosity opacity-70 group-hover:mix-blend-normal group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
+                      className="w-full h-full object-cover" 
                     />
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-colors duration-500 flex items-center justify-center">

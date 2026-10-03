@@ -68,7 +68,8 @@ const SingleBlog = () => {
         return {
           id: el.id,
           text: el.innerText,
-          level: Number(el.tagName.replace('H', ''))
+          level: Number(el.tagName.replace('H', '')),
+          node: el
         };
       });
       setHeadings(parsedHeadings);
@@ -264,7 +265,7 @@ const SingleBlog = () => {
                 {headings.length > 0 && (
                   <div className="bg-[#0A0A0A] border border-[#27272a] p-6 rounded-3xl">
                     <h4 className="text-[10px] font-bold text-[#71717a] uppercase tracking-widest mb-4">Contents</h4>
-                    <nav className="space-y-4">
+                    <nav className="space-y-4 max-h-[calc(100vh-400px)] min-h-[150px] overflow-y-auto pr-4 pb-4" style={{ scrollbarWidth: 'thin', scrollbarColor: '#3f3f46 transparent' }}>
                       {headings.map((h) => (
                         <a
                           key={h.id}
@@ -273,7 +274,10 @@ const SingleBlog = () => {
                             } ${h.level === 3 ? 'ml-4 text-xs' : ''}`}
                           onClick={(e) => {
                             e.preventDefault();
-                            document.getElementById(h.id)?.scrollIntoView({ behavior: 'smooth' });
+                            if (h.node) {
+                              const y = h.node.getBoundingClientRect().top + window.scrollY - 120; // 120px offset for the fixed navbar
+                              window.scrollTo({ top: y, behavior: 'smooth' });
+                            }
                           }}
                         >
                           {h.text}
@@ -300,7 +304,7 @@ const SingleBlog = () => {
                 <Link key={rb._id} to={`/blog/${rb.slug}`} className="group flex flex-col">
                   <div className="aspect-[16/9] bg-[#0A0A0A] rounded-3xl overflow-hidden border border-[#27272a] mb-6 relative">
                     {rb.featuredImage ? (
-                      <img src={rb.featuredImage} alt={rb.title} className="w-full h-full object-cover mix-blend-luminosity opacity-70 group-hover:mix-blend-normal group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" />
+                      <img src={rb.featuredImage} alt={rb.title} className="w-full h-full object-cover" />
                     ) : (
                       <div className="w-full h-full flex items-center justify-center text-[#3f3f46]">No Image</div>
                     )}

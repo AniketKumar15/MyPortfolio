@@ -43,10 +43,11 @@ const Navbar = () => {
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`text-sm font-medium transition-colors ${location.pathname === link.path ? 'text-accent' : 'text-text-secondary hover:text-accent'
+                  className={`relative group text-sm font-medium transition-colors py-1 ${location.pathname === link.path ? 'text-accent' : 'text-text-secondary hover:text-accent'
                     }`}
                 >
                   {link.name}
+                  <span className={`absolute left-0 bottom-0 w-full h-[2px] bg-accent origin-left transition-transform duration-300 ease-out ${location.pathname === link.path ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'}`} />
                 </Link>
               ))}
             </div>
