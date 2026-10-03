@@ -1,0 +1,65 @@
+[
+  {
+    "route": "/blog/unity-bootstrap-scene-production-mobile-game",
+    "title": "Building a Bootstrap Scene for a Production Mobile Game: A Practical Unity Guide | Aniket Kumar",
+    "description": "A bootstrap scene decides whether your mobile game starts reliably or fails in ways you only see in production. This guide covers boot sequence design, service initialization, remote config, failure handling, and the mistakes that cause crashes and slow launches in live Unity games.",
+    "image": "https://ik.imagekit.io/aniketmedia/Portfolio/Posters/Bootstrap%20scene%20feature%20image",
+    "type": "article"
+  },
+  {
+    "route": "/blog/when-a-plugin-wasnt-enough",
+    "title": "When a Plugin Wasn't Enough: Solving a Native Android Sharing Problem in Unity | Aniket Kumar",
+    "description": "What started as a simple \"share your score\" feature quickly turned into one of the most challenging engineering problems I've faced. When a third-party Unity plugin failed to share text and links alongside images on Android, I dug beneath the abstraction, analyzed how the native sharing pipeline worked, and built a custom Android bridge to bypass the plugin's limitation. This devlog covers the problem, the investigation, and the solution.",
+    "image": "https://ik.imagekit.io/aniketmedia/Portfolio/Posters/When%20a%20plugin%20wasn't%20enough",
+    "type": "article"
+  },
+  {
+    "route": "/blog/what-raji-kaliyuga-s-gameplay-trailer-teaches-us-about-modern-game-development",
+    "title": "What Raji: Kaliyuga's Gameplay Trailer Teaches Us About Modern Game Development | Aniket Kumar",
+    "description": "A design analysis for developers, artists, producers, and students in the industry.",
+    "image": "https://ik.imagekit.io/aniketmedia/Portfolio/Posters/hq720.jpg",
+    "type": "article"
+  },
+  {
+    "route": "/blog/what-makes-hyper-casual-games-addictive",
+    "title": "What Makes Hyper-Casual Games Addictive? | Aniket Kumar",
+    "description": "Discover why hyper-casual games keep millions of players hooked. Explore the psychology, game design, and reward systems behind their addictive gameplay, and learn how simple mechanics create engaging experiences that keep users coming back for more.",
+    "image": "https://ik.imagekit.io/aniketmedia/Portfolio/Posters/What%20Makes%20Hyper-Casual%20Games%20Addictive.png",
+    "type": "article"
+  },
+  {
+    "route": "/projects/deepurls-unity-sdk",
+    "title": "DeepUrls SDK: Universal Cross-Platform Deep Linking Plugin for Unity | Aniket Kumar",
+    "description": "A robust, cross-platform Unity SDK that seamlessly bridges C# with Native Android and iOS to handle dynamic deep links, cryptographic security, and marketing attribution out of the box. ",
+    "image": "https://adapty.io/assets/uploads/2024/02/cover-sdk.webp",
+    "type": "website"
+  },
+  {
+    "route": "/projects/dive-horizon",
+    "title": "Dive Horizon | Aniket Kumar",
+    "description": "A physics-based endless arcade game where players dive, glide, and soar across ocean waves, mastering momentum and precision to achieve the highest score.",
+    "image": "https://ik.imagekit.io/aniketmedia/Portfolio/LOGO/DiveHorizon",
+    "type": "website"
+  },
+  {
+    "route": "/projects/dodge",
+    "title": "Dodge | Aniket Kumar",
+    "description": "An endless arcade reflex game where players switch lanes to dodge obstacles, collect coins, and survive as the speed continuously increases.",
+    "image": "https://ik.imagekit.io/aniketmedia/Portfolio/LOGO/Dodge",
+    "type": "website"
+  },
+  {
+    "route": "/projects/blox",
+    "title": "Blox: Stacking Game | Aniket Kumar",
+    "description": "A physics-based tower stacking game where players time each block drop to build the tallest skyscraper while aiming for perfect combos and high scores.",
+    "image": "https://ik.imagekit.io/aniketmedia/Portfolio/LOGO/Blox",
+    "type": "website"
+  },
+  {
+    "route": "/projects/cannon-master",
+    "title": "Cannon Master: Ball Blast Game | Aniket Kumar",
+    "description": "Designed and developed Cannon Master, a fast-paced hyper-casual arcade game featuring endless ball-blasting gameplay, cannon upgrades, coin collection, achievements, and leaderboard integration for an engaging player experience.",
+    "image": "https://ik.imagekit.io/aniketmedia/Portfolio/LOGO/CannonMaster",
+    "type": "website"
+  }
+]

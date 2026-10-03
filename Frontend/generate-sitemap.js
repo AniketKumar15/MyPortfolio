@@ -21,6 +21,7 @@ async function generateSitemap() {
   
   let dynamicRoutes = [];
   let htmlLinks = [];
+  let seoMetadata = [];
   
   try {
     // Try to fetch dynamic blogs
@@ -29,7 +30,16 @@ async function generateSitemap() {
       const blogs = await blogsRes.json();
       const blogRoutes = blogs.map(blog => `/blog/${blog.slug}`);
       dynamicRoutes.push(...blogRoutes);
-      blogs.forEach(blog => htmlLinks.push(`<a href="/blog/${blog.slug}">${blog.title}</a>`));
+      blogs.forEach(blog => {
+        htmlLinks.push(`<a href="/blog/${blog.slug}">${blog.title}</a>`);
+        seoMetadata.push({
+          route: `/blog/${blog.slug}`,
+          title: `${blog.title} | Aniket Kumar`,
+          description: blog.excerpt || `Read ${blog.title} by Aniket Kumar.`,
+          image: blog.featuredImage || `${FRONTEND_URL}/ProfileNoBG.webp`,
+          type: 'article'
+        });
+      });
     }
 
     // Try to fetch dynamic projects
@@ -38,7 +48,16 @@ async function generateSitemap() {
       const projects = await projectsRes.json();
       const projectRoutes = projects.map(project => `/projects/${project.slug}`);
       dynamicRoutes.push(...projectRoutes);
-      projects.forEach(project => htmlLinks.push(`<a href="/projects/${project.slug}">${project.title}</a>`));
+      projects.forEach(project => {
+        htmlLinks.push(`<a href="/projects/${project.slug}">${project.title}</a>`);
+        seoMetadata.push({
+          route: `/projects/${project.slug}`,
+          title: `${project.title} | Aniket Kumar`,
+          description: project.shortDescription || `Check out ${project.title} by Aniket Kumar.`,
+          image: project.thumbnail || `${FRONTEND_URL}/ProfileNoBG.webp`,
+          type: 'website'
+        });
+      });
     }
   } catch (error) {
     console.error("Could not fetch dynamic routes for sitemap (API might be offline):", error.message);
@@ -64,6 +83,7 @@ ${allRoutes.map(route => `
 
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapXML.trim());
   fs.writeFileSync(path.join(publicDir, 'seo-links.html'), htmlLinks.join('\n'));
+  fs.writeFileSync(path.join(process.cwd(), 'routes-data.json'), JSON.stringify(seoMetadata, null, 2));
   console.log(`Sitemap successfully generated at public/sitemap.xml with ${allRoutes.length} URLs.`);
 }
 
