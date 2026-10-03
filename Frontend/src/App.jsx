@@ -1,19 +1,20 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import TargetCursor from './components/TargetCursor';
-import AdminLayout from './pages/admin/AdminLayout';
-import Dashboard from './pages/admin/Dashboard';
-import BlogListAdmin from './pages/admin/BlogListAdmin';
-import BlogCreate from './pages/admin/BlogCreate';
-import CategoryManager from './pages/admin/CategoryManager';
-import Settings from './pages/admin/Settings';
-import AdminLogin from './pages/admin/AdminLogin';
-import ProjectsManager from './pages/admin/ProjectsManager';
-import ResumeBuilder from './pages/admin/ResumeBuilder';
-import AdminMessages from './pages/admin/AdminMessages';
+const AdminLayout = lazy(() => import('./pages/admin/AdminLayout'));
+const Dashboard = lazy(() => import('./pages/admin/Dashboard'));
+const BlogListAdmin = lazy(() => import('./pages/admin/BlogListAdmin'));
+const BlogCreate = lazy(() => import('./pages/admin/BlogCreate'));
+const CategoryManager = lazy(() => import('./pages/admin/CategoryManager'));
+const Settings = lazy(() => import('./pages/admin/Settings'));
+const AdminLogin = lazy(() => import('./pages/admin/AdminLogin'));
+const ProjectsManager = lazy(() => import('./pages/admin/ProjectsManager'));
+const ResumeBuilder = lazy(() => import('./pages/admin/ResumeBuilder'));
+const AdminMessages = lazy(() => import('./pages/admin/AdminMessages'));
 
 // Public Pages
 import Home from './pages/public/Home';
@@ -79,10 +80,20 @@ function App() {
             } />
             
             {/* Admin Login (No Layout) */}
-            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route path="/admin/login" element={
+              <Suspense fallback={<div className="flex h-screen items-center justify-center bg-bg-primary text-white">Loading...</div>}>
+                <AdminLogin />
+              </Suspense>
+            } />
 
             {/* Admin Routes with Layout (Protected) */}
-            <Route path="/admin" element={<PrivateRoute><AdminLayout /></PrivateRoute>}>
+            <Route path="/admin" element={
+              <PrivateRoute>
+                <Suspense fallback={<div className="flex h-screen items-center justify-center bg-bg-primary text-white">Loading Admin...</div>}>
+                  <AdminLayout />
+                </Suspense>
+              </PrivateRoute>
+            }>
               <Route index element={<Dashboard />} />
               <Route path="blogs" element={<BlogListAdmin />} />
               <Route path="blogs/create" element={<BlogCreate />} />

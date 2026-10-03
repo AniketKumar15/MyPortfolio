@@ -114,7 +114,7 @@ const BlogList = () => {
                   
                   {/* Content */}
                   <div className={`flex flex-col flex-1 ${isLarge ? 'md:col-span-5' : ''}`}>
-                    <div className="flex gap-2 items-center text-[10px] font-bold text-[#71717a] uppercase tracking-widest mb-4">
+                    <div className="flex gap-2 items-center text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest mb-4">
                       <span className="text-accent">{blog.category?.name || 'Article'}</span>
                       <span className="w-1 h-1 rounded-full bg-[#3f3f46]"></span>
                       <span>{new Date(blog.createdAt).toLocaleDateString()}</span>

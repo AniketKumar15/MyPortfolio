@@ -140,6 +140,8 @@ const Home = () => {
             alt="Aniket Kumar - Game Developer"
             loading="eager"
             fetchPriority="high"
+            width={600}
+            height={900}
             className="w-[115vw] sm:w-[90vw] max-w-[600px] h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
           />
           {/* Gradient fade to blend the bottom of the image smoothly */}
@@ -186,19 +188,19 @@ const Home = () => {
           >
             <div className="flex flex-col items-center text-center px-1">
               <span className="text-xl sm:text-3xl md:text-4xl font-black text-white mb-1 md:mb-2">{projects?.length || '12'}+</span>
-              <span className="text-[7.5px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-[#71717a] leading-tight">Projects Built</span>
+              <span className="text-[7.5px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-[#a1a1aa] leading-tight">Projects Built</span>
             </div>
             <div className="flex flex-col items-center text-center px-1">
               <span className="text-xl sm:text-3xl md:text-4xl font-black text-white mb-1 md:mb-2">{experiences?.length ? Math.max(1, new Date().getFullYear() - new Date(experiences[experiences.length - 1].startDate).getFullYear()) : '3'}+</span>
-              <span className="text-[7.5px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-[#71717a] leading-tight">Years Experience</span>
+              <span className="text-[7.5px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-[#a1a1aa] leading-tight">Years Experience</span>
             </div>
             <div className="flex flex-col items-center text-center px-1">
               <span className="text-xl sm:text-3xl md:text-4xl font-black text-white mb-1 md:mb-2">{blogs?.length || '0'}+</span>
-              <span className="text-[7.5px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-[#71717a] leading-tight">Devlogs</span>
+              <span className="text-[7.5px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-[#a1a1aa] leading-tight">Devlogs</span>
             </div>
             <div className="flex flex-col items-center text-center px-1">
               <span className="text-xl sm:text-3xl md:text-4xl font-black text-white mb-1 md:mb-2">5+</span>
-              <span className="text-[7.5px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-[#71717a] leading-tight">Game Jams</span>
+              <span className="text-[7.5px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-[#a1a1aa] leading-tight">Game Jams</span>
             </div>
           </motion.div>
 
@@ -306,7 +308,7 @@ const Home = () => {
                         <div key={i}>
                           <div className="flex justify-between items-end mb-2">
                             <span className="text-xs font-bold text-white uppercase tracking-wider">{tech}</span>
-                            <span className="text-xs font-bold text-[#71717a] uppercase tracking-wider">Active</span>
+                            <span className="text-xs font-bold text-[#a1a1aa] uppercase tracking-wider">Active</span>
                           </div>
                           <div className="w-full h-1 bg-[#27272a] rounded-full overflow-hidden">
                             <div className="h-full bg-white w-[85%]"></div>
@@ -350,7 +352,7 @@ const Home = () => {
                   </div>
 
                   <div className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] bg-[#111111] p-8 rounded-3xl border border-[#27272a] group-hover:border-[#3f3f46] transition-colors shadow-sm">
-                    <p className="text-[10px] font-bold text-[#71717a] mb-3 uppercase tracking-widest">{new Date(item.startDate).getFullYear()}</p>
+                    <p className="text-[10px] font-bold text-[#a1a1aa] mb-3 uppercase tracking-widest">{new Date(item.startDate).getFullYear()}</p>
                     <h3 className="font-black text-xl md:text-2xl mb-1 text-white">{item.type === 'education' ? item.institution : item.companyName}</h3>
                     <p className="text-sm font-bold text-accent mb-4">{item.type === 'education' ? item.degree : item.role}</p>
                     <p className="text-[#a1a1aa] leading-relaxed font-medium text-sm">{item.description || 'Dedicated time to expanding skillsets and contributing to meaningful projects.'}</p>

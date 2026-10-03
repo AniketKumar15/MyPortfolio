@@ -162,7 +162,7 @@ const SingleBlog = () => {
                 <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Logs
               </Link>
 
-              <div className="flex items-center gap-3 text-[10px] font-bold text-[#71717a] uppercase tracking-widest mb-4">
+              <div className="flex items-center gap-3 text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest mb-4">
                 <span className="px-3 py-1.5 bg-[#111111] border border-[#27272a] rounded-full text-accent">{blog.category?.name || 'Article'}</span>
                 <span className="px-3 py-1.5 bg-[#111111] border border-[#27272a] rounded-full text-white">{blog.readingTime || 5} min read</span>
                 <span className="px-3 py-1.5 bg-[#111111] border border-[#27272a] rounded-full text-[#a1a1aa]">{new Date(blog.createdAt).toLocaleDateString()}</span>
@@ -229,14 +229,14 @@ const SingleBlog = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-24 gsap-reveal">
                 {prevBlog ? (
                   <Link to={`/blog/${prevBlog.slug}`} className="group p-8 bg-[#0A0A0A] border border-[#27272a] rounded-3xl hover:border-accent transition-colors">
-                    <span className="text-[10px] font-bold text-[#71717a] uppercase tracking-widest mb-3 block">Previous Log</span>
+                    <span className="text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest mb-3 block">Previous Log</span>
                     <h4 className="font-bold text-xl text-white group-hover:text-accent transition-colors line-clamp-2">{prevBlog.title}</h4>
                   </Link>
                 ) : <div />}
 
                 {nextBlog ? (
                   <Link to={`/blog/${nextBlog.slug}`} className="group p-8 bg-[#0A0A0A] border border-[#27272a] rounded-3xl hover:border-accent transition-colors text-right flex flex-col items-end">
-                    <span className="text-[10px] font-bold text-[#71717a] uppercase tracking-widest mb-3 block">Next Log</span>
+                    <span className="text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest mb-3 block">Next Log</span>
                     <h4 className="font-bold text-xl text-white group-hover:text-accent transition-colors line-clamp-2">{nextBlog.title}</h4>
                   </Link>
                 ) : <div />}
@@ -250,7 +250,7 @@ const SingleBlog = () => {
 
                 {/* Share Section */}
                 <div className="bg-[#0A0A0A] border border-[#27272a] p-6 rounded-3xl">
-                  <h4 className="text-[10px] font-bold text-[#71717a] uppercase tracking-widest mb-4">Share Log</h4>
+                  <h4 className="text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest mb-4">Share Log</h4>
                   <div className="flex gap-3">
                     <button onClick={handleCopyLink} className="flex-1 py-3 rounded-xl bg-[#111111] border border-[#27272a] flex items-center justify-center text-[#a1a1aa] hover:text-white hover:bg-[#27272a] transition-all" title="Copy Link">
                       <LinkIcon className="w-4 h-4" />
@@ -264,7 +264,7 @@ const SingleBlog = () => {
                 {/* Table of Contents */}
                 {headings.length > 0 && (
                   <div className="bg-[#0A0A0A] border border-[#27272a] p-6 rounded-3xl">
-                    <h4 className="text-[10px] font-bold text-[#71717a] uppercase tracking-widest mb-4">Contents</h4>
+                    <h4 className="text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest mb-4">Contents</h4>
                     <nav className="space-y-4 max-h-[calc(100vh-400px)] min-h-[150px] overflow-y-auto pr-4 pb-4" style={{ scrollbarWidth: 'thin', scrollbarColor: '#3f3f46 transparent' }}>
                       {headings.map((h) => (
                         <a

@@ -31,7 +31,7 @@ const Footer = () => {
               </div>
               <div>
                 <h2 className="text-lg font-bold tracking-tight text-white">Aniket Kumar</h2>
-                <p className="text-[#71717a] text-[10px] font-bold uppercase tracking-widest mt-0.5">GAME DEVELOPER</p>
+                <p className="text-[#a1a1aa] text-[10px] font-bold uppercase tracking-widest mt-0.5">GAME DEVELOPER</p>
               </div>
             </div>
 
@@ -41,22 +41,22 @@ const Footer = () => {
 
             {/* Dynamic Social Links */}
             <div className="flex items-center gap-3">
-              <a href={socials.github || "#"} target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-[#18181b] flex items-center justify-center text-[#a1a1aa] hover:text-white transition-all">
+              <a href={socials.github || "#"} target="_blank" rel="noreferrer" aria-label="GitHub Profile" className="w-9 h-9 rounded-full bg-[#18181b] flex items-center justify-center text-[#a1a1aa] hover:text-white transition-all">
                 <FaGithub className="w-4 h-4" />
               </a>
-              <a href={socials.linkedin || "#"} target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-[#18181b] flex items-center justify-center text-[#a1a1aa] hover:text-white transition-all">
+              <a href={socials.linkedin || "#"} target="_blank" rel="noreferrer" aria-label="LinkedIn Profile" className="w-9 h-9 rounded-full bg-[#18181b] flex items-center justify-center text-[#a1a1aa] hover:text-white transition-all">
                 <FaLinkedin className="w-4 h-4" />
               </a>
-              <a href={socials.itchio || "#"} target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-[#18181b] flex items-center justify-center text-[#a1a1aa] hover:text-white transition-all">
+              <a href={socials.itchio || "#"} target="_blank" rel="noreferrer" aria-label="Itch.io Profile" className="w-9 h-9 rounded-full bg-[#18181b] flex items-center justify-center text-[#a1a1aa] hover:text-white transition-all">
                 <FaGamepad className="w-4 h-4" />
               </a>
-              <a href={socials.portfolio || "#"} target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-[#18181b] flex items-center justify-center text-[#a1a1aa] hover:text-white transition-all">
+              <a href={socials.portfolio || "#"} target="_blank" rel="noreferrer" aria-label="YouTube Channel" className="w-9 h-9 rounded-full bg-[#18181b] flex items-center justify-center text-[#a1a1aa] hover:text-white transition-all">
                 <FaYoutube className="w-4 h-4" />
               </a>
-              <a href={settings?.email ? `mailto:${settings.email}` : "#"} className="w-9 h-9 rounded-full bg-[#18181b] flex items-center justify-center text-[#a1a1aa] hover:text-white transition-all">
+              <a href={settings?.email ? `mailto:${settings.email}` : "#"} aria-label="Email Address" className="w-9 h-9 rounded-full bg-[#18181b] flex items-center justify-center text-[#a1a1aa] hover:text-white transition-all">
                 <FaEnvelope className="w-4 h-4" />
               </a>
-              {/* <a href={socials.discord || "#"} target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full bg-[#18181b] flex items-center justify-center text-[#a1a1aa] hover:text-white transition-all">
+              {/* <a href={socials.discord || "#"} target="_blank" rel="noreferrer" aria-label="Discord Server" className="w-9 h-9 rounded-full bg-[#18181b] flex items-center justify-center text-[#a1a1aa] hover:text-white transition-all">
                 <FaDiscord className="w-4 h-4" />
               </a> */}
             </div>
@@ -65,7 +65,7 @@ const Footer = () => {
           {/* Navigation Columns */}
           <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-8">
             <div className="space-y-6">
-              <h4 className="text-[11px] font-bold uppercase tracking-widest text-white">NAVIGATION</h4>
+              <h3 className="text-[11px] font-bold uppercase tracking-widest text-white">NAVIGATION</h3>
               <ul className="space-y-4">
                 <li><Link to="/" className="text-[#a1a1aa] hover:text-white text-xs font-medium transition-colors">Home</Link></li>
                 <li><Link to="/blog" className="text-[#a1a1aa] hover:text-white text-xs font-medium transition-colors">Blog</Link></li>
@@ -75,7 +75,7 @@ const Footer = () => {
             </div>
 
             <div className="space-y-6">
-              <h4 className="text-[11px] font-bold uppercase tracking-widest text-white">CATEGORIES</h4>
+              <h3 className="text-[11px] font-bold uppercase tracking-widest text-white">CATEGORIES</h3>
               <ul className="space-y-4">
                 {categories && categories.length > 0 ? (
                   categories.slice(0, 5).map(cat => (
@@ -92,7 +92,7 @@ const Footer = () => {
             </div>
 
             <div className="space-y-6">
-              <h4 className="text-[11px] font-bold uppercase tracking-widest text-white">RESOURCES</h4>
+              <h3 className="text-[11px] font-bold uppercase tracking-widest text-white">RESOURCES</h3>
               <ul className="space-y-4">
                 <li><Link to="/privacy" className="text-[#a1a1aa] hover:text-white text-xs font-medium transition-colors">Privacy Policy</Link></li>
                 <li><Link to="/terms" className="text-[#a1a1aa] hover:text-white text-xs font-medium transition-colors">Terms & Conditions</Link></li>
@@ -101,14 +101,14 @@ const Footer = () => {
             </div>
 
             <div className="space-y-6">
-              <h4 className="text-[11px] font-bold uppercase tracking-widest text-white">CONTACT</h4>
+              <h3 className="text-[11px] font-bold uppercase tracking-widest text-white">CONTACT</h3>
               <ul className="space-y-4">
                 <li className="text-[#a1a1aa] text-xs font-medium">{settings?.location || "Noida, India"}</li>
                 <li className="text-[#a1a1aa] text-xs font-medium">{settings?.email || "aniket87091@gmail.com"}</li>
               </ul>
 
               <div className="mt-8 space-y-2">
-                <h4 className="text-[10px] font-bold uppercase tracking-widest text-[#71717a]">AVAILABLE FOR:</h4>
+                <h3 className="text-[10px] font-bold uppercase tracking-widest text-[#a1a1aa]">AVAILABLE FOR:</h3>
                 <ul className="space-y-1">
                   <li className="text-[#a1a1aa] text-xs font-medium">Freelance</li>
                   <li className="text-[#a1a1aa] text-xs font-medium">Collaboration</li>
@@ -121,10 +121,10 @@ const Footer = () => {
 
         {/* Bottom Copyright */}
         <div className="flex flex-col sm:flex-row items-center justify-between pt-6 gap-4">
-          <p className="text-[#52525b] text-[11px] font-bold tracking-wider">
+          <p className="text-[#a1a1aa] text-[11px] font-bold tracking-wider">
             © {new Date().getFullYear()} Aniket Kumar. Engineered with precision.
           </p>
-          {/* <div className="flex items-center gap-2 text-[#52525b] text-[11px] font-bold tracking-wider uppercase">
+          {/* <div className="flex items-center gap-2 text-[#a1a1aa] text-[11px] font-bold tracking-wider uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
             SYSTEM: ALL SYSTEMS OPERATIONAL
           </div> */}

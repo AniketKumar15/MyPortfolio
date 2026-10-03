@@ -102,7 +102,7 @@ const Contact = () => {
                   <Briefcase className="w-6 h-6 text-[#a1a1aa] group-hover:text-accent transition-colors" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold text-[#71717a] uppercase tracking-widest mb-1">Identity</p>
+                  <p className="text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest mb-1">Identity</p>
                   <p className="font-black text-xl text-white">Aniket Kumar</p>
                   <p className="text-sm font-medium text-accent">Game Developer</p>
                 </div>
@@ -113,7 +113,7 @@ const Contact = () => {
                   <MapPin className="w-6 h-6 text-[#a1a1aa] group-hover:text-accent transition-colors" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold text-[#71717a] uppercase tracking-widest mb-1">Location Base</p>
+                  <p className="text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest mb-1">Location Base</p>
                   <p className="font-black text-xl text-white">Noida, India</p>
                   <p className="text-sm font-medium text-[#a1a1aa]">Remote / Relocation</p>
                 </div>
@@ -124,7 +124,7 @@ const Contact = () => {
                   <Mail className="w-6 h-6 text-[#a1a1aa] group-hover:text-accent transition-colors" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold text-[#71717a] uppercase tracking-widest mb-1">Secure Channel</p>
+                  <p className="text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest mb-1">Secure Channel</p>
                   <p className="font-black text-xl text-white group-hover:text-accent transition-colors">aniket87091@gmail.com</p>
                   <p className="text-sm font-medium text-[#a1a1aa]">Click to send email</p>
                 </div>
@@ -157,19 +157,19 @@ const Contact = () => {
               
               <form className="space-y-6 relative z-10" onSubmit={handleSubmit}>
                 <div className="space-y-3">
-                  <label className="text-[10px] font-bold text-[#71717a] uppercase tracking-widest">Operator Name</label>
+                  <label className="text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest">Operator Name</label>
                   <input type="text" name="name" value={formData.name} onChange={handleChange} required className="w-full px-6 py-4 border border-[#27272a] rounded-xl focus:outline-none focus:border-accent bg-[#111111] text-white transition-colors placeholder:text-[#3f3f46]" placeholder="John Doe" />
                 </div>
                 <div className="space-y-3">
-                  <label className="text-[10px] font-bold text-[#71717a] uppercase tracking-widest">Return Address (Email)</label>
+                  <label className="text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest">Return Address (Email)</label>
                   <input type="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-6 py-4 border border-[#27272a] rounded-xl focus:outline-none focus:border-accent bg-[#111111] text-white transition-colors placeholder:text-[#3f3f46]" placeholder="john@example.com" />
                 </div>
                 <div className="space-y-3">
-                  <label className="text-[10px] font-bold text-[#71717a] uppercase tracking-widest">Subject</label>
+                  <label className="text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest">Subject</label>
                   <input type="text" name="subject" value={formData.subject} onChange={handleChange} required className="w-full px-6 py-4 border border-[#27272a] rounded-xl focus:outline-none focus:border-accent bg-[#111111] text-white transition-colors placeholder:text-[#3f3f46]" placeholder="Project Inquiry" />
                 </div>
                 <div className="space-y-3">
-                  <label className="text-[10px] font-bold text-[#71717a] uppercase tracking-widest">Payload (Message)</label>
+                  <label className="text-[10px] font-bold text-[#a1a1aa] uppercase tracking-widest">Payload (Message)</label>
                   <textarea name="message" value={formData.message} onChange={handleChange} required className="w-full px-6 py-4 border border-[#27272a] rounded-xl focus:outline-none focus:border-accent min-h-[180px] bg-[#111111] text-white transition-colors resize-y placeholder:text-[#3f3f46]" placeholder="Describe your project, mission, or inquiry here..."></textarea>
                 </div>
                 
