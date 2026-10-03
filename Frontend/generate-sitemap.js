@@ -20,6 +20,7 @@ async function generateSitemap() {
   console.log(`Generating sitemap... Fetching data from ${API_URL}`);
   
   let dynamicRoutes = [];
+  let htmlLinks = [];
   
   try {
     // Try to fetch dynamic blogs
@@ -28,6 +29,7 @@ async function generateSitemap() {
       const blogs = await blogsRes.json();
       const blogRoutes = blogs.map(blog => `/blog/${blog.slug}`);
       dynamicRoutes.push(...blogRoutes);
+      blogs.forEach(blog => htmlLinks.push(`<a href="/blog/${blog.slug}">${blog.title}</a>`));
     }
 
     // Try to fetch dynamic projects
@@ -36,6 +38,7 @@ async function generateSitemap() {
       const projects = await projectsRes.json();
       const projectRoutes = projects.map(project => `/projects/${project.slug}`);
       dynamicRoutes.push(...projectRoutes);
+      projects.forEach(project => htmlLinks.push(`<a href="/projects/${project.slug}">${project.title}</a>`));
     }
   } catch (error) {
     console.error("Could not fetch dynamic routes for sitemap (API might be offline):", error.message);
@@ -60,6 +63,7 @@ ${allRoutes.map(route => `
   }
 
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapXML.trim());
+  fs.writeFileSync(path.join(publicDir, 'seo-links.html'), htmlLinks.join('\n'));
   console.log(`Sitemap successfully generated at public/sitemap.xml with ${allRoutes.length} URLs.`);
 }
 
