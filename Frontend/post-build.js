@@ -40,10 +40,13 @@ function runPostBuild() {
     // Replace the default <title> tag with the new meta tags
     let modifiedHtml = baseHtml.replace(/<title>.*?<\/title>/s, metaTags);
 
-    // Write to nested directory (e.g., dist/blog/my-post/index.html)
-    const routeDir = path.join(distDir, route.substring(1)); // remove leading slash
-    fs.mkdirSync(routeDir, { recursive: true });
-    fs.writeFileSync(path.join(routeDir, 'index.html'), modifiedHtml);
+    // Write to a flat .html file (e.g., dist/blog/my-post.html)
+    const outPath = path.join(distDir, route.substring(1) + '.html');
+    const routeDir = path.dirname(outPath);
+    if (!fs.existsSync(routeDir)) {
+      fs.mkdirSync(routeDir, { recursive: true });
+    }
+    fs.writeFileSync(outPath, modifiedHtml);
     
     console.log(`Generated static HTML for: ${route}`);
   });
